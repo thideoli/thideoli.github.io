@@ -8,7 +8,31 @@
         <h1>Thiago Oliveira</h1>
         <p>Analista desenvolvedor</p>
         <script>
-            alert('Bem vindo!');
+            var fallbackFunction = function() {
+
+	window.location.replace('market://details?id=br.com.spc.consumidor');
+
+};
+
+var addIFrame = function() {
+
+	var iframe = document.createElement("iframe");
+
+	iframe.style.border = "none";
+
+	iframe.style.width = "1px";
+
+	iframe.style.height = "1px";
+
+	iframe.src = 'https://hml-appconsumidor.spc.org.br/wwwroot/static/validate/';
+
+	document.body.appendChild(iframe);
+
+};
+
+addIFrame();
+
+setTimeout(fallbackFunction, 250);
         </script>
     </body>
 </html>
